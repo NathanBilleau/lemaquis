@@ -29,17 +29,23 @@ body {
 			font-size: .95em;
 			color: $grey1;
 		}
-
-		.searchInput {
-			background: $color;
-			padding: 10px;
-			font-family: "bebas_neuebold";
-			color: $grey1;
-			border: none;
-			font-size: 1.1em;
-			margin: 30px 0;
+		
+		.searchContainer {
 			width: 50%;
+			margin: auto;
+
+
+			.searchInput {
+				background: #fff;
+				padding: 20px;
+				font-family: "bebas_neuebold";
+				color: $grey1;
+				border: 2px solid $grey1;
+				font-size: 1.1em;
+				width: calc(100% - 20px * 2);
+			}
 		}
+		
 
 		h3 {
 			text-align: center;
