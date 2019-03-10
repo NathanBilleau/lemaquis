@@ -17,7 +17,7 @@ $color: #d2ecdf;
 
 	h1 {
 		font-size: 1em!important;
-		letter-spacing: .3em!important;
+		letter-spacing: .2em!important;
 		color: $grey1;
 		padding: 0!important;
 	}
@@ -25,25 +25,31 @@ $color: #d2ecdf;
 	h2 {
 		font-size: 1em!important;
 		color: $grey2!important;
-		letter-spacing: 0em!important;
+		letter-spacing: 0.05em!important;
 	}
 
 	h3 {
 		font-size: 1em!important;
 		color: $grey2!important;
-		letter-spacing: 0em!important;
+		letter-spacing: 0.05em!important;
 	}
 
 	a {
 		background: $color;
 		position: absolute;
 		font-family: "bebas_neuebold"!important;
-		letter-spacing: .3em!important;
+		letter-spacing: .05em!important;
 		text-decoration: none;
 		right: 0;
 		bottom: 0;
-		padding: 5px;
+		padding: 5px 10px;
 		color: $grey2;
-		font-size: .8em;
+		font-size: .85em;
+		transition: .2s;
+
+		&:hover {
+			font-size: .9em;
+			/* letter-spacing: .2em!important; */
+		}
 	}
 }

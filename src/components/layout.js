@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Menu from "./menu"
 import "../styles/style.scss"
 
 const Layout = ({ children }) => (
@@ -26,6 +27,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header />
+        <Menu />
 
         <div>
         <aside>

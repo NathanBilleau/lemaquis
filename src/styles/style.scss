@@ -9,6 +9,7 @@ body {
 	margin: auto;
 
 
+
 	.HomePage {
 		width: 90%;
 		margin: auto;
@@ -64,6 +65,11 @@ body {
 			font-size: 1.3em;
 			transform: rotate(-90deg);
 			padding: 50px 0;
+			transition: .2s;
+
+			&:hover {
+				color: #232323;
+			}
 		}			
 	}
 }
