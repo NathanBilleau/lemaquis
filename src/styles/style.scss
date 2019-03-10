@@ -1,6 +1,69 @@
 @import "bebas/stylesheet.css";
 
+$grey1: #232323;
+$grey2: #606060;
+$grey3: #9c9c9c;
+
 body {
 	width: 90%;
 	margin: auto;
+
+
+	.HomePage {
+		width: 90%;
+		margin: auto;
+
+		h1 {
+			padding: 7% 0 3% 0;
+			font-family: "bebas_neuebold";
+			color: #232323;
+			font-size: 10em;
+			margin: 0;
+		}
+
+		h3 {
+			text-align: center;
+			font-family: "bebas_neueregular";
+			letter-spacing: .3em;
+			font-size: 1.1em;
+			color: $grey1;
+		}
+
+		p {
+			max-width: 80%;
+			margin: auto;
+			text-align: center;
+			font-family: "Lora";
+			color: #606060;
+			line-height: 1.7em;
+		}
+
+		.nextEventContainer {
+			margin-top: 50px; 
+		}
+	}
+
+
+	aside {
+		position: absolute;
+		width: 5%;
+		height: 100%;
+		left:0;
+		top: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;				
+
+
+		a {
+			text-decoration: none;
+			color: $grey3;
+			list-style-type: none;
+			font-family: "bebas_neuebold";
+			font-size: 1.3em;
+			transform: rotate(-90deg);
+			padding: 50px 0;
+		}			
+	}
 }

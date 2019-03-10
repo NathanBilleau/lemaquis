@@ -1,0 +1,49 @@
+$grey1: #232323;
+$grey2: #606060;
+$grey3: #9c9c9c;
+$color: #d2ecdf;
+
+.homeEvent {
+	border: 2px solid $grey1;
+	padding: 10px;
+	text-align: center;
+	width: 15%;
+	position: relative;
+	margin: auto;
+
+	h1, h2, h3 {
+		font-family: "bebas_neueregular"!important;
+	}
+
+	h1 {
+		font-size: 1em!important;
+		letter-spacing: .3em!important;
+		color: $grey1;
+		padding: 0!important;
+	}
+
+	h2 {
+		font-size: 1em!important;
+		color: $grey2!important;
+		letter-spacing: 0em!important;
+	}
+
+	h3 {
+		font-size: 1em!important;
+		color: $grey2!important;
+		letter-spacing: 0em!important;
+	}
+
+	a {
+		background: $color;
+		position: absolute;
+		font-family: "bebas_neuebold"!important;
+		letter-spacing: .3em!important;
+		text-decoration: none;
+		right: 0;
+		bottom: 0;
+		padding: 5px;
+		color: $grey2;
+		font-size: .8em;
+	}
+}
