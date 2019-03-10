@@ -14,7 +14,7 @@ const Header = () => (
 		    	<img className="logo" src={Logo} alt="logo" />
 		  	</Link>
 		    <div className="icons">
-		      <i className="fa fa-search"></i>
+		      {/*<i className="fa fa-search"></i>*/}
 		      <i className="fa fa-bars" onClick={toggleMenu}></i>
 		    </div>
 		  </header>
