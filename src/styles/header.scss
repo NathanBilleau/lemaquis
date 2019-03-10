@@ -1,0 +1,34 @@
+header {
+	height: 100px;
+	width: 100%;
+	position: relative;
+	/* background: #456; */
+	display: flex!important;
+	justify-content: space-between;
+	align-items: center;
+
+	a {
+		height: 70%;
+		margin: auto 25px;
+
+		.logo {
+			height: 100%;
+			margin: 0;
+		}	
+	}
+
+
+	.icons {
+		i {
+			margin: 0 25px;
+			font-size: .8em;
+			color: #b9b9b9;
+			cursor: pointer;
+			transition: .2s;
+
+			&:hover {
+				color: #232323;
+			}
+		}
+	}
+}
