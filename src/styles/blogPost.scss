@@ -1,0 +1,55 @@
+$grey1: #232323;
+$grey2: #606060;
+$grey3: #9c9c9c;
+$color: #d2ecdf;
+
+article {
+	height: 250px;
+	box-shadow: 0 0 5px $grey1;
+
+	.thumbnail {
+		width: 250px;
+		height:250px;
+		background-size: cover;
+		display: inline-block;
+			vertical-align: middle;
+	}
+
+	.infos {
+		width: calc(100% - 250px - 30px * 2);
+		height: calc(100% - 30px * 2);
+		vertical-align: middle;
+		display: inline-block;
+		padding: 30px;
+
+		h1, h2, h3 {
+			text-align: left;
+			padding: 0!important;
+		}
+
+		h1 {
+			font-size: 2em;
+		}
+
+		h2, h3 {
+			display: inline-block;
+		}
+
+		h2 {
+			font-size: 1em;
+		}
+
+		h3 {
+			font-size: 1em;
+			color: $grey2;		
+		}
+
+		p {
+			text-align: justify;
+			margin: 0!important;
+			padding: 0!important;
+			max-width: 100%!important;
+			width: 100%!important;
+		}
+	}
+}
