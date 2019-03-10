@@ -2,34 +2,40 @@ import React from "react"
 import { Link } from "gatsby"
 
 import "../styles/menu.scss"
+import { MenuContext } from './context'
+
 
 const Menu = () => (
-    <div className="menu active">
-    	<i className="fa fa-times close"/>
+    <MenuContext.Consumer>
+        {({ active, toggleMenu }) => (
+            <div className={active ? 'menu active' : 'menu'}>
+            	<i className="fa fa-times close" onClick={toggleMenu}/>
 
-    	<nav>
-    		<Link to="/" className="active">
-    			home
-    		</Link>
+            	<nav>
+            		<Link to="/" activeClassName="active">
+            			home
+            		</Link>
 
-    		<Link to="/blog">
-    			blog
-    		</Link>
+            		<Link to="/blog" activeClassName="active">
+            			blog
+            		</Link>
 
-    		<Link to="/evenements">
-    			évenements
-    		</Link>
+            		<Link to="/evenements" activeClassName="active">
+            			évenements
+            		</Link>
 
-    		<Link to="/artistes">
-    			artistes
-    		</Link>
+            		<Link to="/artistes" activeClassName="active">
+            			artistes
+            		</Link>
 
-    		<Link to="/contact">
-    			contact
-    		</Link>
+            		<Link to="/contact" activeClassName="active">
+            			contact
+            		</Link>
+            	</nav>
 
-    	</nav>
-    </div>
+            </div>
+        )}
+    </MenuContext.Consumer>
 )
 
 export default Menu

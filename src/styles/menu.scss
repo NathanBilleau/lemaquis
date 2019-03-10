@@ -4,16 +4,16 @@ $grey3: #9c9c9c;
 $color: #d2ecdf;
 
 .menu {
-	width: 20%;
+	width: 350px;
 	height: 100%;
 	position: fixed;
 	top: 0;
-	right: -100%;
+	right: -350px;
 	background: #fff;
 	justify-content: center;
 	display: flex;
 	flex-direction: column;
-	transition: .2s;
+	transition: .5s;
 	box-shadow: 0 0 10px $grey3;
 
 	i.close {
