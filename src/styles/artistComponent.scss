@@ -1,0 +1,47 @@
+
+$grey1: #232323;
+$grey2: #606060;
+$grey3: #9c9c9c;
+$color: #d2ecdf;
+
+a {
+	text-decoration: none;
+
+	& > div {
+		height: 15vw;
+		width: 15vw;
+		margin: 10px 0;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+
+		.infos {
+			background: #fff;
+			opacity: 0;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: .2s;
+
+			&:hover {
+				opacity: .8;
+			}
+
+			h1 {
+				font-size: 2em;
+			}
+
+			h1, h2 {
+				text-align: center;
+			}
+
+			h2 {
+				color: $grey2;
+			}
+		}
+	}
+}
