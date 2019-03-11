@@ -3,28 +3,31 @@ $grey2: #606060;
 $grey3: #9c9c9c;
 $color: #d2ecdf;
 
+
 article {
-	height: 250px;
+	height: 25vh;
 	width: 50%;
 	margin: 20px auto;
 	box-shadow: 0 0 10px $grey3;
 
 	.thumbnail {
-		width: 250px;
-		height:250px;
+		width: 25vh;
+		height: 25vh;
 		background-size: cover;
 		display: inline-block;
-			vertical-align: middle;
+		vertical-align: middle;
 	}
 
 	.infos {
-		width: calc(100% - 250px - 30px * 2);
-		height: calc(100% - 30px * 2);
+		width: calc(100% - 25vh - 1vw * 2);
+		max-height: calc(100% - 1vw * 2);
 		vertical-align: middle;
-		display: inline-block;
-		padding: 30px;
+		padding: 1vw;
 
-		h1, h2, h3 {
+		display: inline-flex;
+		flex-direction: column;
+
+		h1, h2, span {
 			text-align: left;
 			padding: 0!important;
 		}
@@ -33,7 +36,7 @@ article {
 			font-size: 2em;
 		}
 
-		h2, h3 {
+		h2, span {
 			display: inline-block;
 		}
 
@@ -41,7 +44,7 @@ article {
 			font-size: 1em;
 		}
 
-		h3 {
+		span {
 			font-size: 1em;
 			color: $grey2;		
 		}

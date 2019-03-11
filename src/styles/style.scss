@@ -42,7 +42,7 @@ body {
 				color: $grey1;
 				border: 2px solid $grey1;
 				font-size: 1.1em;
-				width: calc(100% - 20px * 2);
+				width: calc(100% - 20px * 2 - 2px * 2);
 			}
 		}
 		
