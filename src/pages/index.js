@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import HomeEvent from "../components/homeEvent"
+import EventComponent from "../components/eventComponent"
 
 const IndexPage = () => (
   <Layout>
@@ -15,7 +15,7 @@ const IndexPage = () => (
     		<h3>
 	    		Prochain évenement
 	    	</h3>
-	    	<HomeEvent />
+	    	<EventComponent />
     	</div>    	
     </div>
     

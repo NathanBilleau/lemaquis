@@ -3,13 +3,13 @@ $grey2: #606060;
 $grey3: #9c9c9c;
 $color: #d2ecdf;
 
-.homeEvent {
+.eventComponent {
 	border: 2px solid $grey1;
 	padding: 10px;
 	text-align: center;
 	width: 15%;
 	position: relative;
-	margin: auto;
+	margin: 10px auto;
 
 	h1, h2, h3 {
 		font-family: "bebas_neueregular"!important;

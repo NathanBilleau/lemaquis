@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import HomeEvent from "../components/homeEvent"
 
 import ArtistComponent from '../components/artistComponent'
 
@@ -16,7 +15,7 @@ const ArtistsPage = () => (
                 <input type="text" className="searchInput" placeholder="Chercher un artiste..." />
             </div>
 
-            <div className="artistsContainer">
+            <div className="flexContainer">
               <ArtistComponent />                    
               <ArtistComponent />                    
               <ArtistComponent />                    
