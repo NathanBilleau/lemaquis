@@ -12,7 +12,7 @@ const EventPage = () => (
             <h1>Évenements</h1>
             <h2>13 évenements</h2>
             <div className="searchContainer">
-                <input type="text" className="searchInput" placeholder="Chercher un article..." />
+                <input type="text" className="searchInput" placeholder="Chercher un évenement..." />
             </div>
 
 

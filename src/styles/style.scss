@@ -1,4 +1,5 @@
 @import "bebas/stylesheet.css";
+@import "lora/stylesheet.css";
 
 $grey1: #232323;
 $grey2: #606060;
@@ -8,6 +9,42 @@ $color: #d2ecdf;
 body {
 	width: 90%;
 	margin: auto;
+
+
+	.contactForm {
+		width: 30%;
+		margin: 20px auto 0;
+
+		input, textarea {
+			width: calc(100% - (10px + 2px) * 2);
+			padding: 10px;
+			font-size: .95em;
+			border: 2px solid $grey1;
+			font-family: "loraregular";
+			margin: 10px 0;
+		}
+
+		input {
+
+		}
+
+		input[type="submit"] {
+			background: $color;
+			width: 100%;
+			font-family: "bebas_neueregular";
+			letter-spacing: .2em;
+			cursor: pointer;
+			transition: .2s;
+
+			&:hover {
+				box-shadow: 0 0 10px $grey3;
+			}
+		}
+
+		textarea {
+			height: 15vh;
+		}
+	}
 
 
 
@@ -60,7 +97,7 @@ body {
 			max-width: 80%;
 			margin: auto;
 			text-align: center;
-			font-family: "Lora";
+			font-family: "loraregular";
 			color: #606060;
 			line-height: 1.7em;
 		}

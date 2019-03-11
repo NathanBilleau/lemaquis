@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const Search = () => (
   <Layout>
     <SEO title="Search" keywords={[`gatsby`, `application`, `react`]} />
     <div className="HomePage">    	
@@ -14,4 +14,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default Search
