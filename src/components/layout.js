@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Menu from "./menu"
@@ -42,11 +41,11 @@ class Layout extends React.Component {
 
           <div>
             <aside>
-              <a target="_blank" href="https://www.instagram.com/le_maquis_art/">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/le_maquis_art/">
                 instagram
               </a>
                   
-              <a target="_blank" href="https://twitter.com/lemaquislemans">
+              <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/lemaquislemans">
                 twitter
               </a>
             </aside>
