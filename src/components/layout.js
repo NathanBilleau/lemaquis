@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 import Header from "./header"
 import Menu from "./menu"
@@ -52,7 +53,7 @@ class Layout extends React.Component {
           <main>{this.props.children}</main>
 
           <footer>
-            Le Maquis - Site réalisé par Nathan Billeau
+            <Link to="/">Le Maquis</Link> - <Link to="/politique-de-confidentialite">Politique de confidentialité</Link> - Site réalisé par Nathan Billeau
           </footer>
 
           </div>
