@@ -6,7 +6,7 @@ import EventComponent from "../components/eventComponent"
 
 const PoliticsPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Politique de confidentialité" keywords={[`gatsby`, `application`, `react`]} />
     <div className="politics">     
         
 
