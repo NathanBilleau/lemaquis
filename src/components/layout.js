@@ -50,9 +50,11 @@ class Layout extends React.Component {
               </a>
             </aside>
           <main>{this.props.children}</main>
+
           <footer>
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            Le Maquis - Site réalisé par Nathan Billeau
           </footer>
+
           </div>
       </div> 
       </MenuContext.Provider>
