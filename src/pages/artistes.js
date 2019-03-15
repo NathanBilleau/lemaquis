@@ -13,19 +13,19 @@ const ArtistsPage = ({data}) => {
   return (<Layout>
     <SEO title="Artistes" keywords={[`gatsby`, `application`, `react`]} />
     <div className="Page1">
-            <h1>Artistes</h1>
-            <h2>20 artistes</h2>
-            <div className="searchContainer">
-                <input type="text" className="searchInput" placeholder="Chercher un artiste..." />
-            </div>
+      <h1>Artistes</h1>
+      <h2>{allMarkdownRemark.edges.length} {allMarkdownRemark.edges.length > 1 ? "artistes" : "artiste"}</h2>
+      <div className="searchContainer">
+        <input type="text" className="searchInput" placeholder="Chercher un artiste..." />
+      </div>
 
-            <div className="flexContainer">
-            { 
-              allMarkdownRemark.edges.map(artist => ( 
-                <ArtistComponent slug={artist.node.fields.slug} frontmatter={artist.node.frontmatter} key={artist.node.id} />
-              ))
-            }
-            </div>
+      <div className="flexContainer">
+        { 
+          allMarkdownRemark.edges.map(artist => ( 
+            <ArtistComponent slug={artist.node.fields.slug} frontmatter={artist.node.frontmatter} key={artist.node.id} />
+          ))
+        }
+      </div>
 
     </div>
     
