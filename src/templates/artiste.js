@@ -20,7 +20,29 @@ export default function ArtistPage ({data})  {
             <div dangerouslySetInnerHTML={{__html: artist.html}}></div>
           </div>
           <div className="artistPic" style={{backgroundImage: 'url(' + artist.frontmatter.pic + ')'}}>
+            <ul className="social">
 
+              <li>
+                <a href={artist.frontmatter.instagram}>
+                  <i className="fab fa-instagram" />
+                </a>
+              </li> 
+
+              <li>
+                <a href={artist.frontmatter.youtube}>
+                  <i className="fab fa-youtube" />
+                </a>
+              </li> 
+
+              <li>
+                <a href={artist.frontmatter.twitter}>
+                  <i className="fab fa-twitter" />
+                </a>
+              </li>
+
+                            
+
+            </ul>
           </div>          
 
         </div>
