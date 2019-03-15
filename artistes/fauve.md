@@ -1,7 +1,7 @@
 ---
 name: Fauve
 styles: ['musique']
-pic: https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80
+pic: http://img.over-blog-kiwi.com/0/19/12/20/20160503/ob_060863_5-fauve-corp2.jpg
 facebook: https://facebook.com
 twitter: https://twitter.com
 instagram: https://instagram.com

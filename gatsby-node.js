@@ -51,7 +51,7 @@ exports.createPages = ({ actions, graphql }) => {
 
 			result.data.allMarkdownRemark.edges.forEach(({node}) => {
 				createPage({
-					path: "/artiste" + node.fields.slug,
+					path: node.fields.slug,
 					component: artistTemplate
 				})
 			})

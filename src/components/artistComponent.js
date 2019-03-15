@@ -3,16 +3,24 @@ import { Link } from "gatsby"
 
 import "../styles/artistComponent.scss"
 
-const BlogPage = () => (
-	<Link to="/artiste/fauve">
-		<div style={{backgroundImage:'url(https://images.unsplash.com/photo-1552084007-76f5feb8d22a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80)'}}>
+class artistComponent extends React.Component {
+
+
+	render () {
+		return (
+				<Link to={this.props.slug}>
+		<div style={{backgroundImage:'url(' + this.props.frontmatter.pic + ')'}}>
 	        <div className="infos">
-	            <h1>Banksy</h1>
-	            <h2>Street Art <br /> Photographie <br /> Peinture</h2>          
+	            <h1>{this.props.frontmatter.name}</h1>
+	            <h2>{this.props.frontmatter.styles.join(' | ')}</h2>          
 	        </div>
 	    </div>
 	</Link>
+			)
+	
+	}
+	
     
-)
+}
 
-export default BlogPage
+export default artistComponent
