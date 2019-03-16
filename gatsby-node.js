@@ -48,7 +48,6 @@ exports.createPages = ({ actions, graphql }) => {
 			        frontmatter {
 			          title
 			          styles
-			          name
 			          pic
 			          facebook
 			          twitter
