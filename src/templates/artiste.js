@@ -52,7 +52,7 @@ export default function ArtistPage ({data})  {
 }
 
 export const query = graphql`
-  query myQuery ($path: String!){
+  query ArtistQuery ($path: String!){
     markdownRemark (fields:{ slug: {eq: $path}}) {
       id
       fields {
