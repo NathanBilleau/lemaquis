@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+
+collections:
+  - name: "artistes" # Used in routes, e.g., /admin/collections/blog
+    label: "Artistes" # Used in the UI
+    folder: "/artistes" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Nom", name: "name", widget: "string", required: true}
+      - {label: "Styles", name: "styles", widget: "list", allow_add: true, required: true}
+      - {label: "Photo", name: "pic", widget: "image", required: true}
+      - {label: "Facebook", name: "facebook", widget: "string"}
+      - {label: "Twitter", name: "twitter", widget: "string"}
+      - {label: "Instagram", name: "instagram", widget: "string"}
+      - {label: "Youtube", name: "youtube", widget: "string"}
+      - {label: "Soundcloud", name: "soundcloud", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown", required: true}
