@@ -143,14 +143,22 @@ body {
 				color: $grey1;
 			}
 
-			p {
-				padding-top: 3%;	
-				margin: auto;
-				text-align: justify;
-				font-family: "loraregular";
-				color: #606060;
-				line-height: 1.7em;
+			div {
+				p {
+					padding-top: 3%;	
+					margin: auto;
+					text-align: justify;
+					font-family: "loraregular";
+					color: #606060;
+					line-height: 1.7em;
+				}
+
+				img {
+					width: 100%;
+				}
 			}
+
+			
 		}
 
 		.artistPic {

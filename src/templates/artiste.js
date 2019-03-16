@@ -22,23 +22,61 @@ export default function ArtistPage ({data})  {
           <div className="artistPic" style={{backgroundImage: 'url(' + artist.frontmatter.pic + ')'}}>
             <ul className="social">
 
-              <li>
-                <a href={artist.frontmatter.instagram}>
-                  <i className="fab fa-instagram" />
-                </a>
-              </li> 
+            { 
+              artist.frontmatter.facebook != null ? 
+                <li>
+                  <a href={artist.frontmatter.facebook}>
+                    <i className="fab fa-facebook" />
+                  </a>
+                </li>
+                :
+                null
+            }
 
-              <li>
-                <a href={artist.frontmatter.youtube}>
-                  <i className="fab fa-youtube" />
-                </a>
-              </li> 
+            { 
+              artist.frontmatter.twitter != null ? 
+                <li>
+                  <a href={artist.frontmatter.twitter}>
+                    <i className="fab fa-twitter" />
+                  </a>
+                </li>
+                :
+                null
+            }
 
-              <li>
-                <a href={artist.frontmatter.twitter}>
-                  <i className="fab fa-twitter" />
-                </a>
-              </li>
+            { 
+              artist.frontmatter.instagram != null ? 
+                <li>
+                  <a href={artist.frontmatter.instagram}>
+                    <i className="fab fa-instagram" />
+                  </a>
+                </li>
+                :
+                null
+            }
+
+            { 
+              artist.frontmatter.youtube != null ? 
+                <li>
+                  <a href={artist.frontmatter.youtube}>
+                    <i className="fab fa-youtube" />
+                  </a>
+                </li>
+                :
+                null
+            }
+
+            { 
+              artist.frontmatter.soundcloud != null ? 
+                <li>
+                  <a href={artist.frontmatter.soundcloud}>
+                    <i className="fab fa-soundcloud" />
+                  </a>
+                </li>
+                :
+                null
+            }
+               
 
                             
 

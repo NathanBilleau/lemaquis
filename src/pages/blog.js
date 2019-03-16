@@ -15,6 +15,8 @@ const BlogPage = ({data}) => {
     if (article.node.fileAbsolutePath.includes('/blog/')) {
       articlesCount += 1
     }
+      return null
+
   })
 
   return (
@@ -32,6 +34,7 @@ const BlogPage = ({data}) => {
               if (article.node.fileAbsolutePath.includes('/blog/')) {
                 return <BlogPost key={article.node.id} slug={article.node.fields.slug} frontmatter={article.node.frontmatter} />
               }
+              else return null
             })
           }
   

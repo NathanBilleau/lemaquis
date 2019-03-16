@@ -15,6 +15,7 @@ const ArtistsPage = ({data}) => {
     if (artist.node.fileAbsolutePath.includes('/artistes/')) {
       artistsCount += 1
     }
+    return null
   })
 
 
@@ -34,6 +35,7 @@ const ArtistsPage = ({data}) => {
               artistsCount += 1
               return <ArtistComponent slug={artist.node.fields.slug} frontmatter={artist.node.frontmatter} key={artist.node.id} />
             }
+            else return null
           })
         }
       </div>
