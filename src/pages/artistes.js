@@ -21,9 +21,11 @@ const ArtistsPage = ({data}) => {
 
       <div className="flexContainer">
         { 
-          allMarkdownRemark.edges.map(artist => ( 
-            <ArtistComponent slug={artist.node.fields.slug} frontmatter={artist.node.frontmatter} key={artist.node.id} />
-          ))
+          allMarkdownRemark.edges.map(artist =>  {
+            if (artist.node.fileAbsolutePath.includes('/artistes/')) {
+              return <ArtistComponent slug={artist.node.fields.slug} frontmatter={artist.node.frontmatter} key={artist.node.id} />
+            }
+          })
         }
       </div>
 
@@ -40,6 +42,7 @@ export const query = graphql`
     edges {
       node {
         id
+        fileAbsolutePath
         fields {
           slug
         }
