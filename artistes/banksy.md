@@ -1,5 +1,5 @@
 ---
-name: Banksy
+title: Banksy
 styles: ['street art', 'photographie', 'peinture']
 pic: https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80
 facebook: https://facebook.com

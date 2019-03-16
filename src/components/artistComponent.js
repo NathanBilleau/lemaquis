@@ -11,7 +11,7 @@ class artistComponent extends React.Component {
 				<Link to={this.props.slug}>
 		<div style={{backgroundImage:'url(' + this.props.frontmatter.pic + ')'}}>
 	        <div className="infos">
-	            <h1>{this.props.frontmatter.name}</h1>
+	            <h1>{this.props.frontmatter.title}</h1>
 	            <h2>{this.props.frontmatter.styles.join(' | ')}</h2>          
 	        </div>
 	    </div>

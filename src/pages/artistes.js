@@ -56,7 +56,7 @@ export const query = graphql`
           slug
         }
         frontmatter {
-          name
+          title
           styles
           pic
         }

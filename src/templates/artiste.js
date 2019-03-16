@@ -10,10 +10,10 @@ export default function ArtistPage ({data})  {
 
     return (
       <Layout>
-        <SEO title={artist.frontmatter.name} keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title={artist.frontmatter.title} keywords={[`gatsby`, `application`, `react`]} />
         <div className="Artist">
           <div className="content">
-            <h1>{ artist.frontmatter.name }</h1>
+            <h1>{ artist.frontmatter.title }</h1>
             <h2>
               {artist.frontmatter.styles.join(' | ')}
             </h2>
@@ -59,7 +59,7 @@ export const query = graphql`
         slug
       }
       frontmatter {
-        name
+        title
         pic
         styles
         facebook

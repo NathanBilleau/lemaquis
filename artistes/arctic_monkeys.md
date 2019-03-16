@@ -1,5 +1,5 @@
 ---
-name: Arctic Monkeys
+title: Arctic Monkeys
 styles: ['musique']
 pic: http://wallpapersdsc.net/wp-content/uploads/2016/10/Arctic-Monkeys-Widescreen.jpg
 facebook: https://facebook.com

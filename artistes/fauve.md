@@ -1,5 +1,5 @@
 ---
-name: Fauve
+title: Fauve
 styles: ['musique']
 pic: http://img.over-blog-kiwi.com/0/19/12/20/20160503/ob_060863_5-fauve-corp2.jpg
 facebook: https://facebook.com
