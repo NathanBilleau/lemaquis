@@ -1,33 +1,82 @@
 import React from "react"
+import { graphql } from "gatsby" 
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import EventComponent from '../components/eventComponent'
 
-const EventPage = () => (
-  <Layout>
+
+class EventPage extends React.Component { 
+   constructor( props, {data}) {
+    super (props)
+    this.state = {
+      search: ''
+    }
+   }
+
+   render () {
+    const { allMarkdownRemark } = this.props.data
+    var eventCount = 0
+
+
+    var events = allMarkdownRemark.edges.map(event =>  {
+      if (event.node.fileAbsolutePath.includes('/evenements/') && event.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase()) ){
+        eventCount += 1
+        return <EventComponent slug={event.node.fields.slug} frontmatter={event.node.frontmatter} key={event.node.id} />
+      }
+      else return null
+    })
+
+    return(
+      <Layout>
     <SEO title="Évenements" keywords={[`gatsby`, `application`, `react`]} />
     <div className="Page1">
             <h1>Évenements</h1>
             <h2>13 évenements</h2>
             <div className="searchContainer">
-                <input type="text" className="searchInput" placeholder="Chercher un évenement..." />
+                <input onChange={(e) => {this.setState({search: e.target.value})}} type="text" className="searchInput" placeholder="Chercher un évenement..." />
             </div>
 
 
           <div className="flexContainer">
-             <EventComponent />
-             <EventComponent />
-             <EventComponent />
-             <EventComponent />
-             <EventComponent />
+             {
+              events
+             }
           </div>
 
 
     </div>
     
   </Layout>
-)
+      )
+
+  
+}
+}
+
+
+
+export const query = graphql`
+  {
+  allMarkdownRemark {
+    edges {
+      node {
+        id
+        fileAbsolutePath
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          place
+          date
+        }
+      }
+    }
+  }
+}
+`
+
 
 export default EventPage
