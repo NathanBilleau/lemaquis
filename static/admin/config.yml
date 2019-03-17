@@ -38,3 +38,15 @@ collections:
       - {label: "Photo", name: "pic", widget: "image"}
       - {label: "Date de publication", name: "date", format: "DD MMMM YYYY", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "evenements" # Used in routes, e.g., /admin/collections/blog
+    label: "Evenements" # Used in the UI
+    folder: "/evenements" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Lieu", name: "place", widget: "map"}
+      - {label: "Date", name: "date", format: "DD MMMM YYYY", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
