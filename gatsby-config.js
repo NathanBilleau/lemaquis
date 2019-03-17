@@ -23,6 +23,13 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `evenements`,
+        path: `${__dirname}/evenements`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

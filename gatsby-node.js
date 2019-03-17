@@ -32,6 +32,7 @@ exports.createPages = ({ actions, graphql }) => {
 
 	const artistTemplate = path.resolve('src/templates/artiste.js')
 	const articleTemplate = path.resolve('src/templates/article.js')
+	const eventTemplate = path.resolve('src/templates/evenement.js')
 	var template
 
 	return graphql(`
@@ -47,6 +48,7 @@ exports.createPages = ({ actions, graphql }) => {
 			        }
 			        frontmatter {
 			          title
+			          place
 			          styles
 			          pic
 			          facebook
@@ -68,6 +70,7 @@ exports.createPages = ({ actions, graphql }) => {
 
 				if (node.fileAbsolutePath.includes('/artistes/')) template = artistTemplate
 				if (node.fileAbsolutePath.includes('/blog/')) template = articleTemplate
+				if (node.fileAbsolutePath.includes('/evenements/')) template = eventTemplate
 
 				createPage({
 					path: node.fields.slug,
