@@ -15,7 +15,7 @@ const IndexPage = () => (
     		<h3>
 	    		Prochain évenement
 	    	</h3>
-	    	<EventComponent />
+	    	{/*<EventComponent />*/}
     	</div>    	
     </div>
     
