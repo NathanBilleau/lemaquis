@@ -46,6 +46,6 @@ collections:
     fields: # The fields for each document, usually in front matter
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Lieu", name: "place", widget: "map"}
+      - {label: "Lieu", name: "place", widget: "string"}
       - {label: "Date", name: "date", format: "DD MMMM YYYY", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
