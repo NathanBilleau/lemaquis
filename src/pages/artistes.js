@@ -29,7 +29,8 @@ class ArtistsPage extends React.Component {
 
 
     
-    return (<Layout>
+    return (
+      <Layout>
       <SEO title="Artistes" keywords={[`gatsby`, `application`, `react`]} />
       <div className="Page1">
         <h1>Artistes</h1>

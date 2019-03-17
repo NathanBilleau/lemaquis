@@ -6,42 +6,46 @@ import SEO from "../components/seo"
 
 import BlogPost from '../components/blogPost'
 
-const BlogPage = ({data}) => {
 
-  const { allMarkdownRemark } = data
-  var articlesCount = 0
-
-  allMarkdownRemark.edges.map(article => {
-    if (article.node.fileAbsolutePath.includes('/blog/')) {
-      articlesCount += 1
+class BlogPage extends React.Component { 
+   constructor( props, {data}) {
+    super (props)
+    this.state = {
+      search: ''
     }
-      return null
+   }
 
-  })
-
-  return (
-    <Layout>
-      <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
-      <div className="Page1">
-        <h1>Blog</h1>
-        <h2>{articlesCount} {articlesCount > 1 ? "articles" : "article"}</h2>
-        <div className="searchContainer">
-          <input type="text" className="searchInput" placeholder="Chercher un article..." />
-        </div>
-  
-          {
-            allMarkdownRemark.edges.map(article => {
-              if (article.node.fileAbsolutePath.includes('/blog/')) {
-                return <BlogPost key={article.node.id} slug={article.node.fields.slug} frontmatter={article.node.frontmatter} />
-              }
-              else return null
-            })
-          }
-  
-  
-      </div>
-      
-    </Layout>)
+   render () {
+   
+     const { allMarkdownRemark } = this.props.data
+     var articlesCount = 0
+   
+     var articles = allMarkdownRemark.edges.map(article => {
+       if (article.node.fileAbsolutePath.includes('/blog/') && article.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase())) {
+         articlesCount += 1
+         return <BlogPost key={article.node.id} slug={article.node.fields.slug} frontmatter={article.node.frontmatter} />
+       }
+        else return null   
+     })
+   
+     return (
+       <Layout>
+         <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
+         <div className="Page1">
+           <h1>Blog</h1>
+           <h2>{articlesCount} {articlesCount > 1 ? "articles" : "article"}</h2>
+           <div className="searchContainer">
+             <input onChange={(e) => this.setState({search: e.target.value})} type="text" className="searchInput" placeholder="Chercher un article..." />
+           </div>
+     
+             {
+               articles 
+             }
+     
+     
+         </div>
+         
+       </Layout>)}
 }
 
 
