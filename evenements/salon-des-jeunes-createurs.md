@@ -1,5 +1,6 @@
 ---
 title: Salon des jeunes créateurs
+template: event
 place: 'Place de la république, Le Mans'
 date: 04 May 2019
 ---

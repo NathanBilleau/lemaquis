@@ -1,5 +1,6 @@
 ---
 title: Jackson Pollock
+template: artist
 styles:
   - Peinture
 pic: /images/uploads/jackson-pollock-11.jpg

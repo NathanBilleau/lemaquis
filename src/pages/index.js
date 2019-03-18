@@ -1,10 +1,12 @@
 import React from "react"
+import moment from "moment"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import EventComponent from "../components/eventComponent"
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="Page1">    	
@@ -21,5 +23,28 @@ const IndexPage = () => (
     
   </Layout>
 )
+
+
+/*export const query = graphql`
+{
+allMarkdownRemark {
+    edges {
+      node {
+        id
+        fileAbsolutePath
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          place
+          date
+        }
+      }
+    }
+  }
+}
+`*/
+
 
 export default IndexPage

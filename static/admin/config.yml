@@ -18,6 +18,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Nom", name: "title", widget: "string"}
+      - {label: "Template", name: "template", widget: "hidden", default: "artist"}
       - {label: "Styles", name: "styles", widget: "list", allow_add: true}
       - {label: "Photo", name: "pic", widget: "image"}
       - {label: "Facebook", name: "facebook", widget: "string",required: false}
@@ -34,9 +35,10 @@ collections:
     fields: # The fields for each document, usually in front matter
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Template", name: "template", widget: "hidden", default: "article"}
       - {label: "Catégories", name: "categories", widget: "list"}
       - {label: "Photo", name: "pic", widget: "image"}
-      - {label: "Date de publication", name: "date", format: "DD MMMM YYYY", widget: "datetime"}
+      - {label: "Date de publication", name: "date", format: "DD/MM/YY", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "evenements" # Used in routes, e.g., /admin/collections/blog
     label: "Évenements" # Used in the UI
@@ -46,6 +48,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Template", name: "template", widget: "hidden", default: "event"}
       - {label: "Lieu", name: "place", widget: "string"}
-      - {label: "Date", name: "date", format: "DD MMMM YYYY", widget: "datetime"}
+      - {label: "Date", name: "date", format: "DD/MM/YY", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
