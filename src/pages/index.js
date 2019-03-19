@@ -8,9 +8,15 @@ import EventComponent from "../components/eventComponent"
 
 export default function IndexPage ({data}) {
     const { allMarkdownRemark } = data
-    allMarkdownRemark.edges.map(event => {
+    var eventIsAfter
+    var eventName
 
-      console.log(moment(event.node.frontmatter.date, "DD MMMM YYYY").isAfter(moment()))
+    allMarkdownRemark.edges.map(event => {
+      eventName = event.node.frontmatter.title
+      eventIsAfter = moment(event.node.frontmatter.date, "DD MMMM YYYY").isAfter(moment())
+      if (eventIsAfter) {
+        console.log(eventName + "est le prochain evenement")
+      }
       return null
     })
 
@@ -36,7 +42,7 @@ export default function IndexPage ({data}) {
 
 export const query = graphql`
   {
-  allMarkdownRemark (sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {template: {eq: "event"}}}) {
+  allMarkdownRemark (sort: {fields: [frontmatter___date], order: ASC}, filter: {frontmatter: {template: {eq: "event"}}}) {
     edges {
       node {
         id
