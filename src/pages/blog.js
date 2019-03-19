@@ -51,7 +51,7 @@ class BlogPage extends React.Component {
 
 export const query = graphql`
   {
-  allMarkdownRemark (filter: {frontmatter: {template: {eq: "article"}}}) {
+  allMarkdownRemark (sort: {fields: [frontmatter___date], order: DESC},filter: {frontmatter: {template: {eq: "article"}}}) {
     edges {
       node {
         id

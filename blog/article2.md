@@ -3,7 +3,7 @@ title: Nouvelle installation en centre ville
 template: article
 categories: ['installation']
 pic: https://images.unsplash.com/photo-1529835813023-cdecbabd6303?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80
-date: 13 mars 2019
+date: 2019-04-13T20:31:52.126Z
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in rep

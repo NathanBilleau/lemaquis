@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import moment from "moment"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -22,7 +23,7 @@ export default function ArticlePage ({data})  {
                 {article.frontmatter.categories.join(' | ')}
               </h2>
               <h3>
-                {article.frontmatter.date}
+                {moment(article.frontmatter.date).format("DD/MM/YYYY")}
               </h3>
             </div>            
             <div dangerouslySetInnerHTML={{__html: article.html}}></div>

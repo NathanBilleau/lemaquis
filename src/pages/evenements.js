@@ -59,7 +59,7 @@ class EventPage extends React.Component {
 
 export const query = graphql`
   {
-  allMarkdownRemark (sort: {fields: [frontmatter___date], order: ASC}, filter: {frontmatter: {template: {eq: "event"}}}) {
+  allMarkdownRemark (sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {template: {eq: "event"}}}) {
     edges {
       node {
         id
