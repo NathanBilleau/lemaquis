@@ -50,5 +50,5 @@ collections:
       - {label: "Titre", name: "title", widget: "string"}
       - {label: "Template", name: "template", widget: "hidden", default: "event"}
       - {label: "Lieu", name: "place", widget: "string"}
-      - {label: "Date", name: "date", format: "DD/MM/YY", widget: "datetime"}
+      - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
