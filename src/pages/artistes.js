@@ -20,7 +20,7 @@ class ArtistsPage extends React.Component {
 
 
     var artists = allMarkdownRemark.edges.map(artist =>  {
-      if (artist.node.fileAbsolutePath.includes('/artistes/') && artist.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase()) ){
+      if (artist.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase()) ){
         artistsCount += 1
         return <ArtistComponent slug={artist.node.fields.slug} frontmatter={artist.node.frontmatter} key={artist.node.id} />
       }
@@ -59,7 +59,7 @@ class ArtistsPage extends React.Component {
 
 export const query = graphql`
   {
-  allMarkdownRemark {
+  allMarkdownRemark (filter: {frontmatter: {template: {eq: "artist"}}}) {
     edges {
       node {
         id

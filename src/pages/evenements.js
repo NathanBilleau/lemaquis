@@ -21,7 +21,7 @@ class EventPage extends React.Component {
 
 
     var events = allMarkdownRemark.edges.map(event =>  {
-      if (event.node.fileAbsolutePath.includes('/evenements/') && event.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase()) ){
+      if (event.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase()) ){
         eventCount += 1
         return <EventComponent slug={event.node.fields.slug} frontmatter={event.node.frontmatter} key={event.node.id} />
       }
@@ -59,7 +59,7 @@ class EventPage extends React.Component {
 
 export const query = graphql`
   {
-  allMarkdownRemark {
+  allMarkdownRemark (filter: {frontmatter: {template: {eq: "event"}}}) {
     edges {
       node {
         id

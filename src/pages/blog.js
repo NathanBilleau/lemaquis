@@ -21,7 +21,7 @@ class BlogPage extends React.Component {
      var articlesCount = 0
    
      var articles = allMarkdownRemark.edges.map(article => {
-       if (article.node.fileAbsolutePath.includes('/blog/') && article.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase())) {
+       if (article.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase())) {
          articlesCount += 1
          return <BlogPost key={article.node.id} slug={article.node.fields.slug} frontmatter={article.node.frontmatter} />
        }
@@ -51,7 +51,7 @@ class BlogPage extends React.Component {
 
 export const query = graphql`
   {
-  allMarkdownRemark {
+  allMarkdownRemark (filter: {frontmatter: {template: {eq: "article"}}}) {
     edges {
       node {
         id
