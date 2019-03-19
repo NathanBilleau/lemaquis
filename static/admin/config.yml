@@ -38,7 +38,7 @@ collections:
       - {label: "Template", name: "template", widget: "hidden", default: "article"}
       - {label: "Catégories", name: "categories", widget: "list"}
       - {label: "Photo", name: "pic", widget: "image"}
-      - {label: "Date de publication", name: "date", format: "DD/MM/YY", widget: "datetime"}
+      - {label: "Date de publication", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "evenements" # Used in routes, e.g., /admin/collections/blog
     label: "Évenements" # Used in the UI

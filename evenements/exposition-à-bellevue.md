@@ -2,7 +2,7 @@
 title: Exposition à Bellevue
 template: event
 place: 'Lycée Bellevue, Le mans'
-date: 27 August 2018
+date: 2019-03-22T20:31:52.126Z
 ---
 jze hzaeio fh zeioh qrze
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-
+import moment from "moment"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -24,7 +24,7 @@ export default function EvenementPage ({data})  {
               {event.frontmatter.place}
             </h2>
             <h3>
-              {event.frontmatter.date}
+              {moment(event.frontmatter.date).format("DD/MM/YYYY")}
             </h3>
           </div>
 
