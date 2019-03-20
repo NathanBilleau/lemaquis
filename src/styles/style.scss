@@ -290,13 +290,15 @@ body {
 
 		}
 
-		input[type="submit"] {
+		button {
 			background: $color;
 			width: 100%;
 			font-family: "bebas_neueregular";
 			letter-spacing: .2em;
 			cursor: pointer;
 			transition: .2s;
+			padding: 10px;
+			border: 2px solid $grey1;
 
 			&:hover {
 				box-shadow: 0 0 10px $grey3;

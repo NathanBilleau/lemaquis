@@ -10,11 +10,11 @@ const ContactPage = () => (
     <div className="Page1">
             <h1>Contact</h1>
 
-            <form className="contactForm">
+            <form className="contactForm" name="contact" netlify>
               <input type="text" name="Nom" placeholder="Nom" />             
               <input type="text" name="Objet" placeholder="Objet" />
               <textarea name="Message" placeholder="Votre message"></textarea>             
-              <input type="submit" value="Envoyer" />
+              <button type="submit">Envoyer</button>
             </form>
 
 
