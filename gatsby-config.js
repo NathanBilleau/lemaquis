@@ -5,8 +5,8 @@ module.exports = {
     author: `@lemaquislemans`,
     siteUrl: `https://lemaquis.netlify.com`,
   },
-  plugins: [`gatsby-plugin-sitemap`],
   plugins: [
+  `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-node-fields`,
