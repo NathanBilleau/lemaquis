@@ -33,7 +33,7 @@ class EventPage extends React.Component {
     <SEO title="Évenements" keywords={[`gatsby`, `application`, `react`]} />
     <div className="Page1">
             <h1>Évenements</h1>
-            <h2>13 évenements</h2>
+            <h2>{eventCount} {eventCount > 1 ? "évenements" : "évenement"}</h2>
             <div className="searchContainer">
                 <input onChange={(e) => {this.setState({search: e.target.value})}} type="text" className="searchInput" placeholder="Chercher un évenement..." />
             </div>
