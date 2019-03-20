@@ -57,7 +57,7 @@ collections:
     files:
       - label: "Accueil"
         name: "home"
-        file: "site/home.yml"
+        file: "site/config.md"
         fields:
           - {label: "Présentation", name: "intro", widget: "markdown"}
           - {label: "Twitter", name: "twitter", widget: "string"}
