@@ -1,0 +1,165 @@
+$grey1: #232323;
+$grey2: #606060;
+$grey3: #9c9c9c;
+$color: #d2ecdf;
+
+@media screen and (max-width: 400px) {
+
+body {
+
+	.politics{
+		h1 {
+			font-size: 3em;
+		}
+	}
+
+	.Article {
+		width: 95%;
+
+		h1 {
+			font-size: 2em;
+
+			&::after {
+				width: 30vw;
+			}
+		}
+
+
+			p {
+				padding-top: 5%;
+				text-indent: 10px;
+			}
+	}
+
+
+
+
+
+	.Evenement {
+		width: 95%;
+
+		h1 {
+			font-size: 2em;
+
+			&::after {
+				width: 30vw;
+			}
+		}
+
+
+
+			p {
+				padding-top: 5%;
+				text-indent: 10px;
+			}
+	}
+
+
+
+
+	.Artist {
+		width: 95%;
+		display: flex;
+		flex-direction: column;
+		align-item: center;
+		justify-content: center;
+
+		.content {
+			order: 2;
+			width: 100%;
+			padding: 0;
+
+			h1 {
+				font-size: 3em;
+
+				&::after {
+					width: 30vw;
+				}
+			}
+
+			div {
+				p {
+					padding-top: 5%;
+				}
+			}
+
+			
+		}
+
+		.artistPic {
+			order: 1;
+			height: 40vh;
+			width: 100%;
+
+			.social {
+
+				li {
+					width: 30px;
+					height: 30px;
+					margin-right: 5px;
+				}
+			}
+		}
+		
+
+		
+
+
+
+
+
+	}
+
+
+	.contactForm {
+		width: 95%;
+	}
+
+
+
+	.Page1 {
+		width: 95%;
+
+		h1 {
+			padding: 7% 0 0	0;
+			font-size: 3em;
+		}
+
+		.searchContainer {
+			width: 100%;
+
+			.searchInput {
+				padding: 15px;
+			}
+		}
+		
+
+		p {
+			padding-top: 5%;
+			max-width: 100%;
+			text-align: justify;
+		}
+
+		.nextEventContainer {
+			margin-top: 20%; 
+		}
+
+	}
+
+	.flexContainer {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin-top: 50px;
+	}
+
+
+	aside {
+		display: flex;
+
+		a {
+			font-size: 1em;
+		}			
+	}
+}
+}

@@ -56,3 +56,38 @@ $color: #d2ecdf;
 		}
 	}
 }
+
+
+@media screen and (max-width: 400px) {
+	
+
+.menu {
+	width: 100%;
+	right: -100%;
+	box-shadow: 0;
+
+	i.close {
+		font-size: 1.5em;
+	}
+
+	nav {
+		margin-right: 0;
+		height: 70%;
+
+		a {
+			font-size: 2.5em;
+			text-align: center;
+
+			&.active::after {
+				display: none;
+			}
+
+			&.active {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+
+}

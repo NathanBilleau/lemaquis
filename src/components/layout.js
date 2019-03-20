@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 
 import Header from "./header"
 import Menu from "./menu"
-import "../styles/style.scss"
 
 import { MenuContext } from './context'
  

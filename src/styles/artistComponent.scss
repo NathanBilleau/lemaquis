@@ -45,3 +45,15 @@ a {
 		}
 	}
 }
+
+@media screen and (max-width: 400px) {
+
+a {
+
+	& > div {
+		height: 70vw;
+		width: 70vw;
+	}
+}
+
+}

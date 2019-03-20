@@ -59,3 +59,41 @@ article {
 		}
 	}
 }
+
+@media screen and (max-width: 400px) {
+
+article {
+	height: 70vw;
+	width: 80vw;
+
+	.thumbnail {
+		width: 35vw;
+		height: 70vw;
+	}
+
+	.infos {
+		width: calc(100% - 35vw - 1vw * 2);
+
+		h1 {
+			font-size: 1.5em;
+			text-align: center;
+		}
+
+		h2 {
+			font-size: .9em;
+			text-align: center;
+		}
+
+		span {
+			font-size: .9em;	
+			text-align: center;	
+		}
+
+		p {
+			display: none;
+		}
+	}
+}
+
+
+}

@@ -53,3 +53,25 @@ $color: #d2ecdf;
 		}
 	}
 }
+
+@media screen and (max-width: 400px) {
+
+.eventComponent {
+	width: calc(70vw - 20px * 2);
+	padding:20px;
+
+	h1 {
+		letter-spacing: .15em!important;
+	}
+
+	a {
+		width: calc(100% - 10px * 2);
+
+		&:hover {
+			font-size: .85em;
+			/* letter-spacing: .2em!important; */
+		}
+	}
+}
+
+}
