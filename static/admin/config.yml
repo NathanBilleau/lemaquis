@@ -60,6 +60,6 @@ collections:
         file: "site/config.md"
         fields:
           - {label: "Titre", name: "title", widget: "hidden", default: "Le Maquis"}
-          - {label: "Présentation", name: "intro", widget: "markdown"}
+          - {label: "Présentation", name: "body", widget: "markdown"}
           - {label: "Twitter", name: "twitter", widget: "string"}
           - {label: "Instagram", name: "instagram", widget: "string"}

@@ -1,7 +1,10 @@
 ---
 title: Le Maquis
-intro: >-
-  La passion pour l’art les a conduits à créer le collectif Le Maquis après un
+twitter: 'https://twitter.com/lemaquislemans'
+instagram: 'https://www.instagram.com/le_maquis_art/'
+---
+
+La passion pour l’art les a conduits à créer le collectif Le Maquis après un
   an de réflexion. « On a choisi ce nom car il symbolise la résistance,
   l’énergie et la jeunesse », confie le représentant du groupe Paul-Emile
   Pacheco.
@@ -20,7 +23,3 @@ intro: >-
 
   « Toute personne intéressée par notre initiative est invitée à nous contacter
   ».
-twitter: 'https://twitter.com/lemaquislemans'
-instagram: 'https://www.instagram.com/le_maquis_art/'
----
-
