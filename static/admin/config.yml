@@ -52,7 +52,7 @@ collections:
       - {label: "Lieu", name: "place", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - label: "Accueil"
+  - label: "Configuration"
     name: "home"
     files:
       - label: "Accueil"
@@ -60,3 +60,5 @@ collections:
         file: "site/home.yml"
         fields:
           - {label: "Présentation", name: "intro", widget: "markdown"}
+          - {label: "Twitter", name: "twitter", widget: "string"}
+          - {label: "Instagram", name: "instagram", widget: "string"}
