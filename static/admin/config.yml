@@ -52,3 +52,11 @@ collections:
       - {label: "Lieu", name: "place", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Accueil"
+    name: "home"
+    files:
+      - label: "Accueil"
+        name: "home"
+        file: "site/home.yml"
+        fields:
+          - {label: "Présentation", name: "intro", widget: "markdown"}
