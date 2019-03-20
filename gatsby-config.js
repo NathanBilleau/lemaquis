@@ -3,7 +3,9 @@ module.exports = {
     title: `Le Maquis`,
     description: `Collectif d'artistes lycéens du Mans.`,
     author: `@lemaquislemans`,
+    siteUrl: `https://www.example.com`,
   },
+  plugins: [`gatsby-plugin-sitemap`],
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
