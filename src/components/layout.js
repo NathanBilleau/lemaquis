@@ -10,7 +10,7 @@ import { MenuContext } from './context'
 
 
 class Layout extends React.Component { 
-   constructor( props, {data}) {
+   constructor(props) {
     super (props)
     this.state = {
       active: false,
@@ -93,23 +93,6 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-
-export const query = graphql`
-{
-  allMarkdownRemark (filter: {frontmatter: {title: {eq: "Le Maquis"}}}) {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          twitter
-          instagram
-        }
-      }
-    }
-  }
-}
-`
 
 export default Layout
 
