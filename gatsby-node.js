@@ -69,13 +69,17 @@ exports.createPages = ({ actions, graphql }) => {
 			result.data.allMarkdownRemark.edges.forEach(({node}) => {
 
 				if (node.fileAbsolutePath.includes('/artistes/')) template = artistTemplate
-				if (node.fileAbsolutePath.includes('/blog/')) template = articleTemplate
-				if (node.fileAbsolutePath.includes('/evenements/')) template = eventTemplate
+				else if (node.fileAbsolutePath.includes('/blog/')) template = articleTemplate
+				else if (node.fileAbsolutePath.includes('/evenements/')) template = eventTemplate
+				else template = null
 
-				createPage({
-					path: node.fields.slug,
-					component: template
-				})
+				if (template !== null) {
+					createPage({
+						path: node.fields.slug,
+						component: template
+					})
+				}
+				
 			})
 		})
 }
