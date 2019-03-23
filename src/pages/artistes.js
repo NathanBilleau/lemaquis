@@ -31,7 +31,7 @@ class ArtistsPage extends React.Component {
     
     return (
       <Layout>
-      <SEO title="Artistes" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Artistes" keywords={[`artistes`, `le maquis`, `le mans`, `art`, `collectif`]} />
       <div className="Page1">
         <h1>Artistes</h1>
         <h2>{artistsCount} {artistsCount > 1 ? "artistes" : "artiste"}</h2>

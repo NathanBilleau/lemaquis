@@ -14,7 +14,7 @@ export default function EvenementPage ({data})  {
 
   return (
     <Layout>
-      <SEO title={event.frontmatter.title} keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title={event.frontmatter.title} keywords={[event.frontmatter.title, `evenement`, `le maquis`, `le mans`, `art`, `collectif`]} />
       <div className="Evenement">
       
         <div className="content">

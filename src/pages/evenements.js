@@ -30,7 +30,7 @@ class EventPage extends React.Component {
 
     return(
       <Layout>
-    <SEO title="Évenements" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Évenements" keywords={[`evenements`, `le maquis`, `le mans`, `art`, `collectif`]} />
     <div className="Page1">
             <h1>Évenements</h1>
             <h2>{eventCount} {eventCount > 1 ? "évenements" : "évenement"}</h2>
