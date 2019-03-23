@@ -12,7 +12,7 @@ const ContactPage = () => (
 
             <form className="contactForm" name="MailContact" method="POST" data-netlify="true">
               <input type="text" name="Nom" placeholder="Nom" />             
-              <input type="mail" name="email" placeholder="Email" />             
+              <input type="email" name="email" placeholder="Email" />             
               <input type="text" name="Objet" placeholder="Objet" />
               <textarea name="Message" placeholder="Votre message"></textarea>             
               <button type="submit">Envoyer</button>
