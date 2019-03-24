@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 
 import "../styles/header.scss"
-import Logo from "../images/logo.png"
+import Logo from "../images/logo.svg"
 
 import { MenuContext } from './context'
 
