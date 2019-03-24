@@ -18,15 +18,21 @@ class EventPage extends React.Component {
    render () {
     const { allMarkdownRemark } = this.props.data
     var eventCount = 0
+    var events
+
+    if (allMarkdownRemark !== null) {
+      events = allMarkdownRemark.edges.map(event =>  {
+        if (event.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase()) ){
+          eventCount += 1
+          return <EventComponent slug={event.node.fields.slug} frontmatter={event.node.frontmatter} key={event.node.id} />
+        }
+        else return null
+      })
+    }
+    else events = null
 
 
-    var events = allMarkdownRemark.edges.map(event =>  {
-      if (event.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase()) ){
-        eventCount += 1
-        return <EventComponent slug={event.node.fields.slug} frontmatter={event.node.frontmatter} key={event.node.id} />
-      }
-      else return null
-    })
+    
 
     return(
       <Layout>

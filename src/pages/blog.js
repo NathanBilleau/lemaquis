@@ -17,16 +17,22 @@ class BlogPage extends React.Component {
 
    render () {
    
-     const { allMarkdownRemark } = this.props.data
-     var articlesCount = 0
-   
-     var articles = allMarkdownRemark.edges.map(article => {
+    const { allMarkdownRemark } = this.props.data
+    var articlesCount = 0
+    var articles
+      
+    if (allMarkdownRemark !== null) {
+      articles = allMarkdownRemark.edges.map(article => {
        if (article.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase())) {
          articlesCount += 1
          return <BlogPost key={article.node.id} slug={article.node.fields.slug} frontmatter={article.node.frontmatter} />
        }
         else return null   
      })
+
+    }
+    else articles = null
+    
    
      return (
        <Layout>

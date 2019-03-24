@@ -17,15 +17,20 @@ class ArtistsPage extends React.Component {
    render () {
     const { allMarkdownRemark } = this.props.data
     var artistsCount = 0
+    var artists
 
+    if (allMarkdownRemark !== null) {
+      artists = allMarkdownRemark.edges.map(artist =>  {
+        if (artist.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase()) ){
+          artistsCount += 1
+          return <ArtistComponent slug={artist.node.fields.slug} frontmatter={artist.node.frontmatter} key={artist.node.id} />
+        }
+        else return null
+      })
 
-    var artists = allMarkdownRemark.edges.map(artist =>  {
-      if (artist.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase()) ){
-        artistsCount += 1
-        return <ArtistComponent slug={artist.node.fields.slug} frontmatter={artist.node.frontmatter} key={artist.node.id} />
-      }
-      else return null
-    })
+    }
+    else artists = null
+    
 
 
     
