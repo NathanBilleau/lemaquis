@@ -17,7 +17,7 @@ class ArtistsPage extends React.Component {
    render () {
     const { allMarkdownRemark } = this.props.data
     var artistsCount = 0
-    var artists
+    var artists = null
 
     if (allMarkdownRemark !== null) {
       artists = allMarkdownRemark.edges.map(artist =>  {
@@ -29,7 +29,6 @@ class ArtistsPage extends React.Component {
       })
 
     }
-    else artists = null
     
 
 

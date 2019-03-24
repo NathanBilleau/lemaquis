@@ -19,7 +19,7 @@ class BlogPage extends React.Component {
    
     const { allMarkdownRemark } = this.props.data
     var articlesCount = 0
-    var articles
+    var articles = null
       
     if (allMarkdownRemark !== null) {
       articles = allMarkdownRemark.edges.map(article => {
@@ -31,7 +31,6 @@ class BlogPage extends React.Component {
      })
 
     }
-    else articles = null
     
    
      return (

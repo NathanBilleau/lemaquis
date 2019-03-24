@@ -10,15 +10,27 @@ export default function IndexPage ({data}) {
     const { allMarkdownRemark } = data
     const { markdownRemark } = data
     var eventIsAfter
-    var NextEvent 
+    var NextEvent = null
 
-    for (let event of allMarkdownRemark.edges) {
-      eventIsAfter = moment(event.node.frontmatter.date).isAfter(moment())
-      if (eventIsAfter) {
-        NextEvent = <EventComponent key={event.node.id} slug={event.node.fields.slug} frontmatter={event.node.frontmatter}/>
-        break
+    if (allMarkdownRemark !== null) {/**/
+      for (let event of allMarkdownRemark.edges) {
+        eventIsAfter = moment(event.node.frontmatter.date).isAfter(moment())
+        if (eventIsAfter) {
+          console.log(event.node.frontmatter.title)
+          NextEvent = (<div className="nextEventContainer">
+                                  <h3>
+                                    Prochain évenement
+                                  </h3>
+                                  <EventComponent key={event.node.id} slug={event.node.fields.slug} frontmatter={event.node.frontmatter}/>
+                                </div>)
+          break
+        }
       }
     }
+
+  
+
+   
 
     return (
       <Layout>
@@ -27,12 +39,9 @@ export default function IndexPage ({data}) {
           <h1>Le Maquis</h1>
           <div dangerouslySetInnerHTML={{__html: markdownRemark.html}}></div>
 
-          <div className="nextEventContainer">
-            <h3>
-              Prochain évenement
-            </h3>
-            {NextEvent}
-          </div>      
+         
+                {NextEvent}
+              
         </div>
         
       </Layout>

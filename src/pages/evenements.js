@@ -18,7 +18,7 @@ class EventPage extends React.Component {
    render () {
     const { allMarkdownRemark } = this.props.data
     var eventCount = 0
-    var events
+    var events = null
 
     if (allMarkdownRemark !== null) {
       events = allMarkdownRemark.edges.map(event =>  {
@@ -29,7 +29,7 @@ class EventPage extends React.Component {
         else return null
       })
     }
-    else events = null
+
 
 
     
