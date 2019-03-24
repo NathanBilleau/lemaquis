@@ -10,7 +10,7 @@ export default function ArtistPage ({data})  {
 
     return (
       <Layout>
-        <SEO title={artist.frontmatter.title} keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title={artist.frontmatter.title} keywords={[artist.frontmatter.title, `artiste`, `le maquis`, `le mans`, `art`, `collectif`]} />
         <div className="Artist">
           <div className="content">
             <h1>{ artist.frontmatter.title }</h1>

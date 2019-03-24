@@ -22,7 +22,7 @@ export default function IndexPage ({data}) {
 
     return (
       <Layout>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title="Home" keywords={[`le maquis`, `le mans`, `art`, `collectif`, `lycéens`, `lycée`, `sarthe`]} />
         <div className="Page1">     
           <h1>Le Maquis</h1>
           <div dangerouslySetInnerHTML={{__html: markdownRemark.html}}></div>

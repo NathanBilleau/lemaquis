@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const PoliticsPage = () => (
   <Layout>
-    <SEO title="Politique de confidentialité" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Politique de confidentialité" keywords={[`le maquis`, `le mans`, `art`, `collectif`]} />
     <div className="politics">     
         
 

@@ -30,7 +30,7 @@ class BlogPage extends React.Component {
    
      return (
        <Layout>
-         <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
+         <SEO title="Blog" keywords={[`articles`, `blog`, `le maquis`, `le mans`, `art`, `collectif`]} />
          <div className="Page1">
            <h1>Blog</h1>
            <h2>{articlesCount} {articlesCount > 1 ? "articles" : "article"}</h2>

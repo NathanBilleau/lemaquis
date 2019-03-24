@@ -11,7 +11,7 @@ export default function ArticlePage ({data})  {
 
     return (
       <Layout>
-        <SEO title={"succès pour “Corps et sensation”"} keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title={article.frontmatter.title} keywords={[article.frontmatter.title, `article`, `le maquis`, `le mans`, `art`, `collectif`]} />
         <div className="Article">
 
         <div className="articlePic" style={{backgroundImage: 'url(' + article.frontmatter.pic + ')'}}></div>      
