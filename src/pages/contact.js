@@ -11,6 +11,7 @@ const ContactPage = () => (
             <h1>Contact</h1>
 
             <form className="contactForm" name="ContactForm" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="ContactForm" />
               <input type="text" name="name" placeholder="Nom" />             
               <input type="email" name="email" placeholder="Email" />
               <textarea name="message" placeholder="Votre message"></textarea>             
