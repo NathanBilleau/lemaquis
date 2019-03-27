@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-node-fields`,
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
