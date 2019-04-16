@@ -14,7 +14,7 @@ class BlogPost extends React.Component {
 			        <div className="infos">
 			            <h1>{this.props.frontmatter.title}</h1>
 			            <h2>{this.props.frontmatter.categories.join(' | ')} - <span>{moment(this.props.frontmatter.date).format("DD/MM/YYYY")}</span></h2>          
-			            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			            <p>{this.props.content}</p>
 			        </div>
 			    </article>
 			</Link>	

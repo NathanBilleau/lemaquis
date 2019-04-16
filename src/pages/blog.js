@@ -25,7 +25,7 @@ class BlogPage extends React.Component {
       articles = allMarkdownRemark.edges.map(article => {
        if (article.node.frontmatter.title.toUpperCase().includes(this.state.search.toUpperCase())) {
          articlesCount += 1
-         return <BlogPost key={article.node.id} slug={article.node.fields.slug} frontmatter={article.node.frontmatter} />
+         return <BlogPost key={article.node.id} slug={article.node.fields.slug} frontmatter={article.node.frontmatter} content={article.node.excerpt} />
        }
         else return null   
      })
@@ -70,7 +70,7 @@ export const query = graphql`
           date
           pic
         }
-        html
+        excerpt
       }
     }
   }
